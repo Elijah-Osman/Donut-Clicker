@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Donut Clicker</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Fred the Baker Baking Company!</h1>
+        <span>Our business is donuts.</span>
+
+        <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <li type="none"><a href="#" onclick="openModal('about')">About Us</a></li>
+            <li type="none"><a href="#" onclick="openModal('inspiration')">Inspiration</a></li>
+            <li type="none"><a href="#" onclick="openModal('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Modal for "About" -->
+    <div class="modal" id="aboutModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('about')">&times;</span>
+        <h2>About</h2>
+        <p>Company Information: Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quaerat aliquam laudantium nobis excepturi labore perferendis minus. Corporis repellat delectus, iste adipisci optio sunt illo quisquam fuga ex unde quidem!</p>
+    </div>
+    </div>
+
+    <!-- Modal for "Inspiration" -->
+    <div class="modal" id="inspirationModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('inspiration')">&times;</span>
+        <h2>Inspiration</h2>
+        <p>Type and change here </p>
+        <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">
+        <p>Cookie Clicker</p>
+        </a>
+    </div>
+    </div>
+
+    <!-- Modal for "Contact" -->
+    <div class="modal" id="contactModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('contact')">&times;</span>
+        <h2>Contact</h2>
+        <p>Type and change here </p>
+        <a href= target="_blank">Portfolio</a> <br />
+        <br />
+        <a href= target="_blank">GitHub</a>
+    </div>
+    </div>
+
+    </header>
+
+    <main>
+        <section id="donutClickSection">
+            <h3>Donut Count Section (Please Click The Donut!)</h3>
+            <p id="counter">Donut Count: <span id="counting">0</span> </p>
+            <button id="pushButton" onclick="donutClick()"><img src="./images/donut.jpg" width="60" alt="Donut"></button>
+        </section>
+        <section id="autoClickerSection">
+            <h3>Auto Clicker Section</h3>
+            <p id="AutoClickerCount">Auto Clicker Count: <span id="autoClickerCount">0</span> </p>
+            <p id="autoClicker1">Auto Clicker Cost: <span id="autoClickerCost">100</span> </p>
+            <button id="autoClicker" onclick="purchaseAutoclicker()">Buy Auto Clicker</button>
+        </section>
+        <section class = "centered" id="resetSection">
+            <button id="reset" onclick="clearResult()">Reset</button>
+        </section>
+    <script src="app.js"></script>
+    </main>  
+
+</body>
+</html>
